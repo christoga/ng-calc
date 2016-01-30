@@ -11,6 +11,30 @@
 			<h1>ngCalc</h1>
 			<p>Calculator written in AngularJS</p>
 		</div>
+		<div class="col-md-3">	
+			<h3>Plus:</h3>		
+			<input type="number" class="form-control" ng-model="plusone">
+			<input type="number" class="form-control" ng-model="plustwo">			
+			<h4>{{ plusone + plustwo }}</h4>
+		</div>
+		<div class="col-md-3">	
+			<h3>Minus:</h3>		
+			<input type="number" class="form-control" ng-model="minusone">
+			<input type="number" class="form-control" ng-model="minustwo">			
+			<h4>{{ minusone - minustwo }}</h4>
+		</div>
+		<div class="col-md-3">	
+			<h3>Multi:</h3>		
+			<input type="number" class="form-control" ng-model="multione">
+			<input type="number" class="form-control" ng-model="multitwo">			
+			<h4>{{ multione * multitwo }}</h4>
+		</div>
+		<div class="col-md-3">	
+			<h3>Divide:</h3>		
+			<input type="number" class="form-control" ng-model="divideone">
+			<input type="number" class="form-control" ng-model="dividetwo">			
+			<h4>{{ divideone / dividetwo }}</h4>
+		</div>
 	</div>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/angular.js"></script>
