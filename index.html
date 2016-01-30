@@ -5,17 +5,113 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+	  <header class="mdl-layout__header">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title">AngularJS Calculator</span>
+	    </div>
+	    <!-- Tabs -->
+	    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+	      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Plus</a>
+	      <a href="#fixed-tab-2" class="mdl-layout__tab">Minus</a>
+	      <a href="#fixed-tab-3" class="mdl-layout__tab">Multi</a>
+	      <a href="#fixed-tab-4" class="mdl-layout__tab">Divide</a>
+	    </div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title">Title</span>
+	  </div>
+	  <main class="mdl-layout__content">
+	  <center>
+	    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+	      <div class="page-content">
+	      	<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="plusone" class="mdl-textfield__input" id="plusone" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="plusone">Plus One</label>
+		  	</div><br>
+		  	<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="plustwo" class="mdl-textfield__input" id="plustwo" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="plustwo">Plus Two</label>
+		  	</div><br>
+		  	<!-- Colored mini FAB button -->
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+			  {{ plusone + plustwo }}
+			</button>
+	      </div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+	      <div class="page-content">
+			<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="minusone" class="mdl-textfield__input" id="minusone" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="minusone">Minus One</label>
+		  	</div><br>
+		  	<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="minustwo" class="mdl-textfield__input" id="minustwo" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="minustwo">Minus Two</label>
+		  	</div><br>
+		  	<!-- Colored mini FAB button -->
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+			  {{ minusone - minustwo }}
+			</button>
+	      </div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+	      <div class="page-content">
+			<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="timesone" class="mdl-textfield__input" id="timesone" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="timesone">Times One</label>
+		  	</div><br>
+		  	<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="timestwo" class="mdl-textfield__input" id="timestwo" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="timestwo">Times Two</label>
+		  	</div><br>
+		  	<!-- Colored mini FAB button -->
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+			  {{ timesone * timestwo }}
+			</button>
+	      </div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+	      <div class="page-content">
+	      	<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="divideone" class="mdl-textfield__input" id="divideone" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="divideone">Divide One</label>
+		  	</div><br>
+		  	<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="dividetwo" class="mdl-textfield__input" id="dividetwo" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="dividetwo">Divide Two</label>
+		  	</div><br>
+		  	<!-- Colored mini FAB button -->
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+			  {{ divideone / dividetwo }}
+			</button>
+	      </div>
+	    </section>
+	   </center>
+	  </main>	  
+	</div>
+
+	<!-- <div class="container">
 		<div class="jumbotron">
 			<h1>ngCalc</h1>
 			<p>Calculator written in AngularJS</p>
 		</div>
 		<div class="col-md-3">	
 			<h3>Plus:</h3>		
-			<input type="number" class="form-control" ng-model="plusone">
+			<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="plusone" class="mdl-textfield__input" id="plusone" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="plusone">Plus One</label>
+		  	</div>			
 			<input type="number" class="form-control" ng-model="plustwo">			
+			<div class="mdl-textfield mdl-js-textfield">		    	
+		    	<input type="number" ng-model="plusone" class="mdl-textfield__input" id="plusone" style="width:350px;">
+		    	<label class="mdl-textfield__label" for="plusone">Plus One</label>
+		  	</div>			
 			<h4>{{ plusone + plustwo }}</h4>
 		</div>
 		<div class="col-md-3">	
@@ -36,7 +132,7 @@
 			<input type="number" class="form-control" ng-model="dividetwo">			
 			<h4>{{ divideone / dividetwo }}</h4>
 		</div>
-	</div>
+	</div> -->
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/angular.js"></script>
 	<script src="js/main.js"></script>
